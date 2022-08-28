@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Users Manager</title>
+    <link rel="stylesheet" href="/css/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/css/manageProduct.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/searchBar.css" type="text/css" />
+        
+  </head>
+  <body>
+    <div class="container">
+      
+      <%- include ('include/header.ejs') %>
+
+      <div class="content">
+        
+        <%- include('include/left') %>
+
+        <div class="content-middle">
+      
+
+          <div class="middle-table">
+            <table class="stock-table">
+              <tr>
+                <th class="table-header">User Name</th>
+                <th class="table-header">User Email</th>
+                <th class="table-header">User Password</th>
+              </tr>
+
+              <% user.forEach (user => { %>
+              <tr>
+                <td>  <%=  user.userName %>   </td>
+                <td>  <%=  user.userEmail %>   </td>
+                <td>  <%=  user.userPwd  %>    </td>   
+                <!-- <td>  <img class="table-icon" src="/images/products/" alt=" product.productImageUrl ">  </td> -->
+              </tr>
+              <% }) %>
+            </table>
+          </div>
+        </div>
+      <div class="content-right"> 
+      </div>
+    </div>
+<link>
+
+  </body>
+</html>

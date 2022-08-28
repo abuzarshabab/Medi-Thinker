@@ -1,0 +1,38 @@
+   
+<link rel="stylesheet" href="/css/productDiv.css">
+
+<div class="product-container">
+    <div class="products-title   center-left">Health Product</div>
+<div class="product-flex">
+    <% health.forEach(health =>{ %>
+    <div class="product">
+        <div class="product-image-frame">
+          <img src="/images/products/<%= health.productImageUrl %>" class="product-image-size" alt="Product">
+        </div>
+        <div class="product-text-container">
+          <div class="product-price">
+            <div class="product-selling">
+              <%= health.productMrp %>
+            </div>
+             <div class="product-mrp">
+             <del><%= health.productMrp %></del>
+             </div>
+            
+          </div>
+          <div class="product-details">
+             <%= health.productName %>
+          </div>
+          <div class="button">
+            <a href="/product/details/<%= health._id %> ">Details</a> 
+          </div>
+          <div class="button">
+            <a href="/product/buy/<%= health._id %> "> Buy </a> 
+          </div>
+         </div>
+        </div>
+       
+      <% }) %>
+     </div>
+    <!-- End of one product -->
+  </div>
+  <!-- end of product container -->

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/css/adminLogin.css" type="text/css">
+    <title>Admin</title>
+  </head >
+  <body>
+  <div class="container">
+
+    <div class="login-div">
+      <form action="/admin/index" method="post" class="login">
+        <div class="login-para">
+          Login in as admin
+        </div>
+        
+        <% if(errStatus === 'True'){ %>
+          <div class="error-msg">
+             <%= errMsg %>
+          </div>
+        <% } %>
+
+         <div class="input-div">
+           <p class="instruction-para">Email Address</p>
+           <input class="input" type="text" name="adminEmail" id="adminEmail" placeholder="admin@medemail.com" class="input-box" required  />
+         </div>
+
+         <div class="input-div">
+           <p class="instruction-para">Password</p>
+           <input class="input" class="input" type="password" name="adminPwd" id="adminPwd" placeholder="********" class="input-box" required />
+           <a href="/admin/forgotPassword">  
+            <p class="instruction-para align-right">Forgot password ?</p>
+          </a>
+         </div>
+         
+         <div class="login-button">
+           <input class="transparent-button" type="submit" name="submit" value="Login">
+         </div>
+         <div class="create-button">
+           <a href="/admin/register">
+              Admin Account Request
+           </a>
+          </div>
+        </form>
+      </div>  <!--End of login div-->
+    <div class="blank">
+           <img class="logo" src="/logo/MediThinker.png" alt="LoGo">
+    </div>
+  </div> 
+  </body>
+</html>

@@ -1,0 +1,78 @@
+.table-icon{
+  height:50px;
+  width:50px;
+}
+.content-middle {
+  
+  margin-left:100px;
+  height: 100%;
+  width: 90%;
+  background-color: white;
+}
+.middle-table {
+  border:1px solid rgba(0,0,0,0.1);
+  display: flex;
+  height:auto;
+  width: 85%;
+  margin: auto;
+
+}
+
+.stock-table {
+  text-align: center;
+  width: 100%;
+  border-collapse: collapse;
+}
+.table-header {
+  background-color: #9ed5f3;
+  border-bottom: 2px solid black;
+  height: 40px;
+}
+td {
+  padding:10px;
+  height: 30px;
+  border-bottom: 1px solid black;
+}
+tr:nth-child(even) {
+  background-color: #e4f3fc;
+}
+.middle-navbar {
+  
+  
+  display: flex;
+  margin: auto;
+  height: 5%;
+  width:85%;
+ 
+  margin-top: 20px;
+  margin-bottom:20px;
+}
+
+.middle-button {
+  align-items: center;
+  box-shadow:5px 7px 10px grey;
+  background-color: #9ed5f3;
+  text-align: center;
+  padding: 5px;
+  margin-right:20px;
+  height: 90%;
+  width: 15%;
+}
+.table-button {
+  background-color: #9ed5f3;
+  padding: 2px;
+  border:2px solid rgba(0,0,0,0.1)
+}
+
+.addProduct {
+  box-shadow:  10px 10px 10px  grey;
+  background-color: #e4f3fc;
+  padding: 30px;
+  height: 80%;
+  width: 85%;
+  margin: auto;
+  margin-top: 10px;
+  text-align: center;
+  box-shadow: 5px;
+  
+}

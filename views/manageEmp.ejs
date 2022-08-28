@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Manage Employee</title>
+    <link rel="stylesheet" href="/css/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/css/manageProduct.css" type="text/css"/>
+  </head>
+  <body>
+    <div class="container">
+      <!-- This is for header -->
+     <%- include('include/header.ejs') %>
+
+      <div class="content">
+        <!-- This  is for left div -->
+        <%- include('include/left.ejs') %>
+<!--         
+         <div class="content-middle"> -->
+          <!-- <div class="middle-navbar">
+            <div class="middle-button">
+              <a href="EmployeeManager.html">Employee </a>
+            </div>
+
+            <div class="middle-button">
+              <a href="addEmployee.html">Add </a>
+            </div>
+
+            <div class="middle-button">
+              <a href="removeEmployee.html">Remove</a>
+            </div>
+            <div class="middle-button">
+              <a href="UpdateEmployee.html">Update </a>
+            </div>
+            <div class="middle-button ">
+              <a href="search.html">Search </a>
+            </div> -->
+         
+            <div class="content-middle">
+    
+              <div class="middle-table">
+                <table class="stock-table">
+                  <tr class="table-top" >
+                        <th colspan="6" class="table-top-data">Employee </th>
+                  </tr>
+                  <tr>
+                    <th class="table-header"> Name</th>
+                    <th class="table-header"> Email</th>
+                    <th class="table-header"> Password</th>
+                    <th class="table-header"> DOB</th>
+                    <th class="table-header"> Contact</th>
+                    <th class="table-header"> Image </th>
+                  </tr>
+    
+                  <% admin.forEach ((admin) => { %>
+                  <tr>
+                    <td>  <%=  admin.adminName %>   </td>
+                    <td>  <%=  admin.adminEmail %>   </td>
+                    <td>  <%=  admin.adminPwd  %>    </td>   
+                    <td>  <%=  admin.adminDOB %>   </td>
+                    <td>  <%=  admin.adminContact  %>    </td>
+                    <td>  <%=  admin.adminImageUrl %>   </td>
+                    
+                    <!-- <td>  <img class="table-icon" src="/images/products/" alt=" product.productImageUrl ">  </td> -->
+                  </tr>
+                  <% }) %>
+                </table>
+              </div>
+            </div>
+         <div class="content-right1">
+
+         </div>
+        
+      </div>
+    </div>
+  </body>
+</html>

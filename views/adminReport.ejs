@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Admin report</title>
+ 
+    <link rel="stylesheet" href="/css/report.css" type="text/css" />
+    <link rel="stylesheet" href="/css/layout.css" type="text/css"/>
+  </head>
+  <body>
+    <div class="container" id="container">
+       <!-- This frag is for Heaeder file -->
+        <%- include('include/header.ejs') %>
+
+      
+      <div class="content">
+        <!-- This frag is for content left -->
+        <%- include('include/left.ejs') %>
+      
+        <div class="content-middle" id="contentMiddle">
+          <div class="middle-navbar">
+            <div class="middle-button">
+              <a href="Report.html">Daily </a>
+            </div>
+
+            <div class="middle-button">
+              <a href="MonthlyReport.html">Monthly</a>
+            </div>
+
+            <div class="middle-button ">
+              <a href="Product.html">Search </a>
+            </div>
+          </div>
+
+          <div class="middle-table">
+            <table class="stock-table">
+              <tr>
+                <th class="table-header">Customer Name</th>
+                <th class="table-header">Product Name</th>
+                <th class="table-header">Quantity</th>
+                <th class="table-header">Transaction Id</th>
+                <th class="table-header">Sale@</th>
+                <th class="table-header">UID</th>
+                <th class="table-header">Date</th>
+              </tr>
+              <tr>
+                <td>Shariya Aman</td>
+                <td>LevoCitrizin</td>
+                <td>10</td>
+                <td>1232</td>
+                <td>45.00</td>
+                <td>848492235867</td>
+                <td>19/03/2020</td>
+              </tr>
+              <tr>
+                <td>Shariya Aman</td>
+                <td>LevoCitrizin</td>
+                <td>10</td>
+                <td>1232</td>
+                <td>45.00</td>
+                <td>848492235867</td>
+                <td>19/03/2020</td>
+              </tr>
+              <tr>
+                <td>Shariya Aman</td>
+                <td>LevoCitrizin</td>
+                <td>10</td>
+                <td>1232</td>
+                <td>45.00</td>
+                <td>848492235867</td>
+                <td>19/03/2020</td>
+              </tr>
+              <tr>
+                <td>Shariya Aman</td>
+                <td>LevoCitrizin</td>
+                <td>10</td>
+                <td>1232</td>
+                <td>45.00</td>
+                <td>848492235867</td>
+                <td>19/03/2020</td>
+              </tr>
+              <tr>
+                <td>Shariya Aman</td>
+                <td>LevoCitrizin</td>
+                <td>10</td>
+                <td>1232</td>
+                <td>45.00</td>
+                <td>848492235867</td>
+                <td>19/03/2020</td>
+              </tr>
+            </table>
+          </div>
+         </div>
+          <div class="content-right1">
+          </div>
+      </div>
+    </div>
+      
+    <script src="/js/admin.js"></script>
+  </body>
+</html>

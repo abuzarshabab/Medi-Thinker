@@ -1,0 +1,21 @@
+.product{
+    padding:20px;
+    width:100%;
+    align-items: center;
+    text-align:center;
+    display:flex;
+    flex-direction: column;
+    font-weight:bold;
+    font-size:1.1em;
+}
+
+
+.name{
+    border-radius:2px;
+    padding:10px;
+   
+}
+.product-img{
+    height:300px;
+    width:300px;
+}

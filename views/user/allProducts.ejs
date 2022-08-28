@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medi-Thinker</title>
+    <link rel="stylesheet" href="/css/allProduct.css">
+</head>
+<body>
+   <div class="container">
+
+
+
+     <!-- Header -->
+
+     <%- include('../include/userHeader.ejs') %>
+    <!-- Title    -->
+    <div class="product-header">
+      <%= msg %>
+     </div>
+
+     <% prod.forEach((prod) =>{ %>  
+      <div class="product-container">
+        <div class="product">
+
+          <div class="product-img">
+            <img class="product-image-size" src="/images/products/<%= prod.productImageUrl %>" alt="product">
+          </div>
+
+          <div class="product-name">
+            <%=  prod.productName %>
+          </div>
+          
+          <div class="product-size">
+            Pack Of <%=  prod.subUnit %> <%= prod.productType %>
+          </div>
+          
+          <div class="product-price">
+           Mrp Rs  <%=  prod.productMrp %>
+          </div>
+
+          <a href="/user/product/<%= prod._id %> " >  
+            <div class="button">
+             Detail
+            </div>
+          </a>
+          <a href="/user/buy/<%= prod._id %> " >
+            <div class="button">
+              Buy Now
+            </div>
+         </a>
+
+        </div>
+      </div>
+     <% }) %>
+   </div> 
+ </body>
+</html>

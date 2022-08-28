@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta />
+    <title>Product Manager</title>
+    <link rel="stylesheet" href="/css/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/css/sellProduct.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/searchBar.css" type="text/css" />
+    
+  </head>
+  <body>
+    <div class="container">
+      <!-- ```This is for header -->
+      <%- include('include/header.ejs') %>
+      <div class="content">
+        <!-- This is foor left Nav -->
+        <%- include('include/left.ejs') %>
+        <div class="content-middle">
+
+        <form action="/admin/billingReciept/<%= product._id %>" method="post">
+          <table class="middle-table">
+
+            <tr>
+              <td>    Product Name  </td>
+              <td> <input name="customerName" type="text" value=" <%= product.productName %>" disabled>  </td>
+            </tr>
+            <tr>
+                <td>    Product Price  </td>
+                <td > <input name="productPrice" id="productMrp" type="text" value="<%= product.productMrp %> " disabled> </td>
+            </tr>
+            <tr>
+                <td>   Total available product  </td>
+                <td>  <input name="availableProduct" type="text" value="<%= product.units %> " disabled></td>
+            </tr>
+            <tr>
+                <td>   Enter Patient Name  </td>
+                <td>  <input name="customerName" type="text" value="" required ></td>
+            </tr>
+            <tr>
+                <td>   Enter Selling Quantity  </td>
+                <td>  <input  name="sellingQuantity" type="number"  id="sellingQuantity" required ></td>
+            </tr>
+
+            <tr>
+                <td>   Price To Be Paid  </td>
+                <td>   <input  name="totalPrice" id="totalPrice" type="text" value="" disabled>  </td>
+            </tr>
+            <tr>
+                <td colspan="2">  <input id="submit" class="input-button" type="submit" value="Sell">   </td> 
+            </tr>
+          </table>
+        </form> 
+        </div>
+      </div>
+    </div>
+   <script src="/js/sellProduct.js"></script>
+  </body>
+</html>

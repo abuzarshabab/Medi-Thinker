@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title>Product Manager</title>
+    <link rel="stylesheet" href="/css/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/css/manageProduct.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/searchBar.css" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+     
+      <!-- header snipped -->
+      <%- include('include/header.ejs') %>
+
+      <div class="content">
+        <!-- this is for content left-->
+        <%- include('include/left.ejs') %>
+
+        <div class="content-middle">
+          <!-- This is for produc nav-->
+            <%- include('include/productNav.ejs') %>
+          <div class="middle-table">
+            <table class="stock-table">
+              <tr>
+                <th class="table-header">Product Name</th>
+                <th class="table-header">Type</th>
+                <th class="table-header">EXP</th>
+                <th class="table-header">Type</th>
+                <th class="table-header">Purchase</th>
+                <th class="table-header">Selling</th>
+                <th class="table-header">Units</th>
+                <th class="table-header">SubUnits</th>
+                <th class="table-header">Image</th>  
+                <th class="table-header"> MoreDetails</th>
+              </tr>
+              <% product.forEach(product =>{ %>
+                <tr>
+                  <td>  <%=  product.productName %>   </td>
+                  <td>  <%=  product.productType %>   </td>
+                  <td>  <%=  product.productExp %>    </td>
+                  <td>  <%=  product.productType %>   </td>
+                  <td>  <%=  product.productMpp %>    </td>
+                  <td>  <%=  product.productMrp %>    </td>
+                  <td>  <%=  product.units %>         </td> 
+                  <td>  <%=  product.subUnits %>      </td>
+                  <td>  <img class="table-icon" src="/images/products/<%=  product.productImageUrl %>" alt="<%=  product.productImageUrl %>">  </td>
+  
+                  <td> <a class="table-button" href="/admin/removeProduct/<%= product._id %>">  Delete </a> </td>
+                </tr>
+              <% }) %>
+          
+            </table>
+          </div>
+        </div>
+
+        <div class="content-right"></div>
+      </div>
+    </div>
+  </body>
+</html>

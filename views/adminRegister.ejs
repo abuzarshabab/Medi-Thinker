@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/css/adminLogin.css" type="text/css">
+    <title>Admin</title>
+  </head >
+
+  <body>
+    <div class="container">
+  
+      <div class="login-div">
+        <form action="/admin/register" method="post" class="login">
+          <div class="login-para">
+           Register Yourself
+          </div>
+
+          <% if(errStatus === 'True'){ %>
+            <div class="error-msg">
+               <%= errMsg %>
+            </div>
+          <% } %>
+
+
+           <div class="input-div">
+             <p class="instruction-para">Enter  Name</p>
+             <input class="input" type="text" name="adminName" id="adminName" placeholder="Mr.John" class="input-box" required  />
+           </div>
+
+           <div class="input-div">
+            <p class="instruction-para">Enter Email Address</p>
+            <input class="input" type="email" name="adminEmail" id="adminEmail" placeholder="admin@medemail.com" class="input-box" required  />
+          </div>
+
+          <div class="input-div">
+            <p class="instruction-para">Enter Password</p>
+            <input class="input" type="password" name="adminPwd1" id="adminPwd1" placeholder="********" class="input-box" required  />
+          </div>
+
+           <div class="input-div">
+             <p class="instruction-para">ReEnter Password</p>
+             <input class="input" type="password" name="adminPwd2" id="adminPwd2" placeholder="********" class="input-box" required />
+           </div>
+
+           <div class="login-button">
+             <input class="transparent-button" type="submit" name="submit" value="Create">
+           </div>
+           <a href="/admin/login">
+             <div class="create-button">
+               <p>  Login </p>
+             </div>
+           </a>
+          </form>
+          
+          
+      
+        </div>  <!--End of Register div-->
+      <div class="blank">
+             <img class="logo" src="/logo/MediThinker.png" alt="LoGo">
+      </div>
+
+
+    </div> 
+    </body>
+  </html>
+  
+
+
+
+
+
+
+
+
+

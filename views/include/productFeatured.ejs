@@ -1,0 +1,38 @@
+   
+<link rel="stylesheet" href="/css/productDiv.css">
+
+<div class="product-container">
+    <div class="products-title   center-left">Protective Product</div>
+<div class="product-flex">
+    <% protective.forEach(protective =>{ %>
+    <div class="product">
+        <div class="product-image-frame">
+          <img src="/images/products/<%= protective.productImageUrl %>" class="product-image-size" alt="Product">
+        </div>
+        <div class="product-text-container">
+          <div class="product-price">
+            <div class="product-selling">
+              <%= protective.productMrp %>
+            </div>
+             <div class="product-mrp">
+               <del><%= protective.productMrp %></del>
+             </div>    
+            </div>
+
+          <div class="product-details">
+            <%= protective.productName%>
+          </div>
+          <div class="button">
+            <a href="/product/details/<%= protective._id %> ">Details</a> 
+          </div>
+          <div class="button">
+            <a href="/product/buy/<%= protective._id %> "> Buy </a> 
+          </div>
+         </div>
+        </div>
+       
+      <% }) %>
+     </div>
+    <!-- End of one product -->
+  </div>
+  <!-- end of product container -->

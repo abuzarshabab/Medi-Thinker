@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="/css/productDetails.css"> 
+    <title> product</title>
+</head>
+<body>
+    <div class="container">
+        <%- include ('include/header.ejs') %>
+        <!-- product div -->
+      <div class="product">
+
+          <div class="product-img">
+              <img class="product-img" src="/images/products/<%= product.productImageUrl %>">
+          </div>
+         <div class="name" >
+                Name : <%= product.productName %>
+         </div>
+         <div class="name">
+            Composition :  <%= product.productComposition %>
+         </div>
+         <div class="name">
+             Type :  <%= product.productType %>
+         </div>
+         <div class="name">
+            Category :  <%= product.productCategory %>
+         </div>
+         <div class="name">
+            Product MPP :  <%= product.productMpp %>
+         </div>
+         <div class="name">
+            Product MRP :  <%= product.productMrp %>
+         </div>
+         <div class="name">
+            Units :  <%= product.units %>
+         </div>
+
+         <div class="name">
+            Sub Units :  <%= product.subUnits %>
+         </div>
+
+         <div class="name">
+            ExpiryDate :  <%= product.productExp %>
+         </div>
+         <div class="name">
+            MFD :  <%= product.productMfd %>
+         </div>
+         <div class="name">
+             Product Description : <%= product.productDesc %>
+         </div>
+       </div>
+      <!--  End of product div-->
+      
+    </div>
+
+</body>
+</html>

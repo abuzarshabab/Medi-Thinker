@@ -1,0 +1,36 @@
+.product{
+  padding:20px;
+  width:100%;
+  align-items: center;
+  text-align:center;
+}
+.product-name-container{
+    padding:30px;
+  display:flex;
+  font-weight:bold;
+  font-size:1.3em;
+}
+.product-name{
+    border-radius:25px;
+    padding:10px;
+    border:2px solid rgba(0,0,0,0.2);
+}
+.product-img{
+    height:300px;
+    width:300px;
+}
+.product-price{
+    margin:auto;
+    padding:10px;
+    height:10%;
+    width:30%;
+    border-radius: 10px;
+    border:2px solid rgba(0,0,0,0.1);
+    border:1px solid rgb(0,0,0);
+    
+
+}
+.product-about{
+
+    margin:20px;
+}

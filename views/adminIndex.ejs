@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Admin Home page</title>
+ 
+    <link rel="stylesheet" href="/css/adminIndex.css" type="text/css" />
+    <link rel="stylesheet" href="/css/layout.css" type="text/css"/>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <!-- This frag is for Heaeder file -->
+        <%- include('include/header.ejs') %>
+
+      
+     <div class="content">
+        <!-- This frag is for left content -->
+        <%- include('include/left') %>
+       <div class="content-middle" id="contentMiddle">
+        <div class="middle-menu" id="middleMenu">
+          <div class="menu-products menu-icon border-right">
+
+            <div class="product-number menu-number"> <%= prod.length %> </div>
+            <div class="product-title menu-title">
+              <a href="/admin/manageProduct">
+                Products
+              </a>
+            </div>
+
+          </div>
+          <div class="middle-orders menu-icon border-right">
+            <div class="ordder-number menu-number">100</div>
+            <div class="order-title menu-title">Order Request</div>
+          </div>
+          <div class="middle-customers menu-icon">
+            <div class="customers-number menu-number"> <%= user.length %> </div>
+            <div class="customers-title menu-title">
+              <a href="/admin/manageUser">
+                Users
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="middle-graph">
+          <div class="graph-name"></div>
+          <div class="graph-img"></div>
+        </div>
+      </div>
+
+      <!-- <div class="content-right" id="contentRight">
+        <div class="right-outofstock">
+          <div class="title-bar menu-title">Out Of Stock</div>
+          <div class="list"></div>
+        </div>
+      </div> -->
+    </div>
+    
+    <script src="/js/adminIndex.js"></script>
+  </body>
+</html>

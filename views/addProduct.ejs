@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- <meta http-equiv="refresh" content="6" /> -->
+    <title>Product Manager</title>
+    <link rel="stylesheet" href="/css/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/css/manageProduct.css" type="text/css" />
+    <link rel="stylesheet" href="/css/addproduct.css" type="text/css"/>
+    <link rel="stylesheet" href="/css/searchBar.css" type="text/css" />
+
+  </head>
+  <body>
+    <div class="container">
+     <!-- header snipped cod -->
+      <%- include('include/header.ejs') %>
+      <div class="content">
+        <!-- snipped code for  -->
+        <%- include ('include/left') %>
+
+        <div class="content-middle">
+          <!-- for middle navbar -->
+         <%- include ('include/productNav') %>
+          <div class="addProduct">
+            <!-- For sending data to server form -->
+            <form action="/admin/submitProduct" method="POST">
+  
+                    <legend>Add Product</legend>      
+                    <br>
+                    Product Name <input type="text" name="productName" id="productName" required><br><br>
+                   
+                    Composition<input type="text" name="productComposition" id="composition" required><br><br>
+
+                    Product Image <input type="text" name="productImageUrl" id="productImageUrl" required> <br><br>
+                    
+
+                    
+                    Type  <select name="productType" required ></br><br>
+                      <option value="syrup">Syrup</option>
+                      <option value="tablet">Tablet</option>
+                      <option value="drop">Drop</option>
+                      <option value="capsule">Capsule</option>
+                      <option value="nasalSpray">Nasal Spray</option>
+                      <option value="iv/im">Iv & Im</option>
+                      <option value="external">External</option>
+                  
+                      
+                      </select></br><br>
+
+                      Category  <select name="productCategory" required></br><br>
+                       
+                      Category  <select name="productCategory" value="<%= product.productCategory %>" required></br><br>
+                        <option value="Medicine">  Medicine  </option>
+                        <option value="Health">  Health  </option>
+                        <option vlaue="Protective"> Protective  </option>
+                        <option value="Muscle"> Muscle </option> <br>
+
+                    Purchase Rate <input type="number" name="productMpp" id="ProductMpp" required></br><br>
+
+                   Maximum Retail price<input type="number" name="productMrp" id="ProductMrp" required> &nbsp;</br><br>
+
+                    Units <input type="number" name="units" id="units" required></br><br>
+                    
+                    Sub Units <input type="number" name="subUnit" id="subUnit" required></br><br>
+                    
+                    Sub Item <input type="number" name="subItem" id="subItem" > &nbsp;</br><br>
+                    
+                    Expiry Date<input type="date" name="productExp" id="productExp" required></br><br>
+                    
+                    Manufacturing Date <input type="date" name="productMfd" id="productMfd" required></br><br>
+                    
+                    Product Description <input type="text" name="productDesc" id="productDesc" required><br><br>
+                   
+                    <button type="submit" name="submit" value="submit" class="table-button">submit</button></br><br>
+         
+                   
+            </form>
+          </div>    
+        </div>
+
+        <div class="content-right"></div>
+      </div>
+    </div>
+    <script src ="/js/addProduct.js"></script>
+  </body>
+</html>

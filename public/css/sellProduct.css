@@ -1,0 +1,51 @@
+.table-icon{
+    height:50px;
+    width:50px;
+  }
+  
+.middle-table {
+   
+    border:1px solid rgba(0,0,0,0.1);
+    display: flex;
+    height:auto;
+    margin-left:50px;
+    margin-top: 30px;
+    padding:20px;
+    border-radius: 5px;
+    background-color: #e4f3fc;
+  }
+
+  .content-middle {
+     
+    
+    margin-left:100px;
+    height: 100%;
+   
+    background-color: white;
+  }
+
+  tr{
+      padding:20px;
+      height:30px;
+      width:auto;
+  }
+  td{
+      text-align: center;
+      padding:10px;
+  }
+  input{
+      text-align: center;
+      padding:5px;
+      border-radius: 5px;
+      border:2px solid rgba(61, 154, 177,0.7);
+    
+  }
+  .input-button{    
+    border:none;
+  
+    background-color: thistle;
+    padding:10px;
+    padding:10px 30px 10px 30px;
+    
+  
+  }
